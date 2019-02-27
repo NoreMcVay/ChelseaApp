@@ -1,5 +1,5 @@
 # ChelseaApp
-Practise MEAN Stack Chelsea Football Club App 
+Practise MEAN Stack Chelsea Football Club App using Bootstrap
 
 1. run 'npm install' from both 'chelseaMeanAppFolder/cfcApp' & 'chelseaMeanAppFolder'
 2. run 'node server' from 'chelseaMeanAppFolder/server' to start server
