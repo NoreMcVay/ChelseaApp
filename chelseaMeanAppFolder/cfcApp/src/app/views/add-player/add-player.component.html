@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Chelsea FC app</h1>
+      <p>Welcome to my Chelsea Football Club MEAN Stack app. Add a footballer who plays for the blues inside the
+        form and add their details inside the input field. To see the list of players entered, click the 'see players'
+        button in the navbar above which will direct you to the players component!</p>
+
+      <img src="../assets/images/hazardten.jpg" class="img-responsive">
+    </div>
+    <div class="col-md-6">
+        <div class="form_bg">
+          <h1 class="text-center">Add Player</h1>
+
+          <form #addPlayerForm="ngForm" (ngSubmit)="addNewPlayer(addPlayerForm)" novalidate> <!--We pass the form as the parameter to addNewFighter function-->
+              <div class="form-group">
+                  <label for="firstname">Firstname:</label>
+                  <input type="text" class="form-control" id="firstname" [(ngModel)]="player.firstname" name="firstname" placeholder="Enter firstname" required>
+              </div>
+              <div class="form-group">
+                  <label for="surname">Surname:</label>
+                  <input type="text" class="form-control" id="surname" [(ngModel)]="player.surname" name="surname" placeholder="Enter surname">
+              </div>
+              <div class="form-group">
+                  <label for="age">Age:</label>
+                  <input type="text" class="form-control" id="age" [(ngModel)]="player.age" name="age" placeholder="Enter age">
+              </div>
+              <div class="form-group">
+                  <label for="squadnumber">Number:</label>
+                  <select class="form-control" id="squadnumber" [(ngModel)]="player.squadnumber" name="squadnumber" placeholder="Enter squad number">
+                    <option *ngFor="let squadnumber of squadnumbers" [value]="squadnumber">{{ squadnumber }}</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label for="previous">Previous Club:</label>
+                  <input type="text" class="form-control" id="previous" [(ngModel)]="player.previous" name="previous" placeholder="Enter last club">
+              </div>
+              <div class="form-group">
+                  <label for="nationality">Nationality:</label>
+                  <input type="text" class="form-control" id="nationality" [(ngModel)]="player.nationality" name="nationality" placeholder="Enter country">
+              </div>
+
+              <button type="submit" class="btn btn-basic pull-right">Submit</button>
+           </form>
+         </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+.row:before, row:after { /* this sorts out bootstrap in safari!!!!!!!*/
+  display: inline-block;
+}

@@ -1,0 +1,18 @@
+<h1 class="mb-3">Player Profile</h1>
+
+<div class="card p-3 m-3">
+    <div class="text-center">
+        <img class="card-img-top mb-3 rounded cfcBadgePic" src="../assets/images/cfcbadge.jpg" alt="player-image">
+    </div>
+    <ul class="list-group">
+        <li class="list-group">Firstname: {{ player.firstname }}</li>
+        <li class="list-group">Surname: {{player.surname}}</li>
+        <li class="list-group">Age: {{player.age}}</li>
+        <li class="list-group">Number: {{player.squadnumber}}</li>
+        <li class="list-group">Previous Club: {{player.previous}}</li>
+        <li class="list-group">Nationality: {{player.nationality}}</li>
+    </ul>
+</div>
+
+<a routerLink="/players" class="btn btn-danger m-1">Back</a>
+<a [routerLink]="['/edit-players/', playerId]" class="btn btn-danger black-background white">Edit</a>

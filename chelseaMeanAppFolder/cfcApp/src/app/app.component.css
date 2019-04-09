@@ -1,0 +1,127 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #050C3C;
+  color: #FFF;
+  padding: 1% 0;
+  font-size: 1.2em;
+  border: 0;
+  text-align: center;
+}
+.navbar-brand {
+  float: left;
+  min-height: 55px;
+  padding: 0 15px 5px;
+}
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,.navbar-inverse .navbar-nav .active a:hover {
+  color: #FFF;
+  background-color: #050C3C;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #D5D5D5;
+  padding: 4% 0; /*this fixed the navbar and the home button that was sticking out! */
+  margin-left:8px;  /*this fixed the space between the nav buttons */
+  margin-right:8px;
+}
+
+.logo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  margin-left: -80px;
+}
+
+.container {
+  margin: 4% auto;
+}
+#icon {
+  max-width: 200px;
+  margin: 1% auto;
+}
+footer {
+  width: 100%;
+  background-color: #050C3C;
+  padding: 3%;
+  color: #FFF;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  color: #FFF;
+}
+
+.fa:hover {
+  color: #D5D5D5;
+  text-decoration: none;
+}
+
+.sortMenu {
+  text-align: left;
+  height: 35px;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .fa {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .sortMenu {
+    text-align: center;
+    height: 15px;
+    font-size: 14px;
+    margin-right: 60px;
+    margin-left: -30px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  #icon {
+    max-width: 150px;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  .logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    text-align: left;
+    margin-left: -30px;
+  }
+
+  .sortMenu {
+    text-align: center;
+    height: 20px;
+    font-size: 14px;
+    margin-right: 80px;
+  }
+
+}
+
+
+
+@media (max-width: 400px) {
+  #icon {
+    max-width: 150px;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  .logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin-left: -30px;
+  }
+
+  .sortMenu {
+    text-align: center;
+    height: 20px;
+    font-size: 10px;
+    margin-right: 80px;
+  }
+
+}
+

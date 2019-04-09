@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="text-center">Players</h1>
+  </div>
+    <div class="row">
+      <div class="card m-2" *ngFor="let player of players; let i = index">
+        <div class="text-center m-1">
+          <button class="btn btn-basic" (click)="getPlayerProfile(i)">View Full Profile</button>
+          <button class="btn btn-basic" (click)="getPlayerToEdit(i)">Edit</button>
+          <button class="btn btn-basic" (click)="deletePlayer(i)">x</button>
+        </div>
+        <img class="card-img-top mt-3 rounded badgeSize" src="../assets/images/bluebadge.jpg" alt="fighter-image">
+        <div class="card-body">
+          <h5 class="card-title">{{ player.firstname }} {{ player.surname }}</h5>
+          <p class="card-text mb-0">ObjectId:  <small>{{ player._id }}</small></p>
+          <p class="card-text mb-0">Age: <span class="pull-right">{{ player.age }}</span></p>
+          <p class="card-text mb-0">Number: <span class="pull-right">{{ player.squadnumber }}</span></p>
+          <p class="card-text mb-0">Previous Club: <span class="pull-right">{{ player.previous }}</span></p>
+          <p class="card-text mb-0">Country: <span class="pull-right">{{ player.nationality }}</span></p>
+        </div>
+      </div>
+    </div>
+</div>
+
