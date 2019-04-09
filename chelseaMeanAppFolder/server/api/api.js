@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 const playerModel = require('../models/player');
 
-const mongodb = 'mongodb://localhost:27017/cfcApp';//tells us where to locate our database
-mongoose.connect(mongodb, {useNewUrlParser: true});//connects to database
+const mongodb = 'mongodb://localhost:27017/cfcApp';
+mongoose.connect(mongodb, {useNewUrlParser: true});
 
 router.get('/players', (req, res) => {
     playerModel
@@ -20,10 +20,10 @@ router.get('/players', (req, res) => {
 });
 
 
-router.get('/player/:id', (req, res) => { //the :id is called a route parameter and it can be accessed using req.params.id
+router.get('/player/:id', (req, res) => { 
     playerModel
-        .find({_id: req.params.id}) //find is the function to find all documents with _id or req.params.id
-        .then(doc => {   //then and catch handle promises. Promises are what came before observables.
+        .find({_id: req.params.id}) 
+        .then(doc => {   
             console.log("Selected Player Details:", doc)
             res.send(doc);
         })
