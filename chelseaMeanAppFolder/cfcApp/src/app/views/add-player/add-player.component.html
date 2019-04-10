@@ -12,7 +12,7 @@
         <div class="form_bg">
           <h1 class="text-center">Add Player</h1>
 
-          <form #addPlayerForm="ngForm" (ngSubmit)="addNewPlayer(addPlayerForm)" novalidate> <!--We pass the form as the parameter to addNewFighter function-->
+          <form #addPlayerForm="ngForm" (ngSubmit)="addNewPlayer(addPlayerForm)" novalidate> 
               <div class="form-group">
                   <label for="firstname">Firstname:</label>
                   <input type="text" class="form-control" id="firstname" [(ngModel)]="player.firstname" name="firstname" placeholder="Enter firstname" required>
