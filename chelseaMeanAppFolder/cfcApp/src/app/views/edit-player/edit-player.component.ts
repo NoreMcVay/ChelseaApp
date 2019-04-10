@@ -24,16 +24,15 @@ export class EditPlayerComponent implements OnInit {
           29, 30, 31, 32, 33, 34, 35, 36, 37,
           38, 39, 40, 41, 42, 43, 44, 45, 46,
           47, 48, 49, 50];
-        this.route.params.subscribe(params => { // gets the route parameter which will be the player's ObjectId
+        this.route.params.subscribe(params => { 
             this.playerId = params.id;
             console.log('route params: ', params);
         });
-        this.getPlayer(this.playerId); // call the getPlayer function using the player's Object Id
+        this.getPlayer(this.playerId); 
     }
 
     getPlayer(playerId) {
         console.log('PLAYER ID: ', playerId);
-// tslint:disable-next-line: whitespace
         this.http.get('/api/player/' + playerId).subscribe((details) => {
             console.log('getPlayer: ', details);
             this.player = details[0];
@@ -43,7 +42,6 @@ export class EditPlayerComponent implements OnInit {
 
     updateplayer(editPlayerForm: NgForm) {
         console.log('playerForm: ', editPlayerForm.value);
-        // tslint:disable-next-line:max-line-length
         this.player = Object.assign(this.player, editPlayerForm.value);
         console.log('Player Updated details', this.player);
         this.http.put('/api/update-player', this.player).subscribe(() => console.log('Successfully posted!'));
