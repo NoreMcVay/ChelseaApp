@@ -22,21 +22,20 @@ export class PlayersComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line:max-line-length
-  getPlayerToEdit(index) {  // Notice on Line 6 of the html file,let i = index and then we pass i to the function. This is the index number of the fighter in the fighters array so we can locate the selected fighter
+  getPlayerToEdit(index) {  
       console.log('button works');
       this.player = this.players[index];
-      this.router.navigate(['/edit-players', this.player._id]); // navigate the browser to /edit-fighters/this.fighters._id
+      this.router.navigate(['/edit-players', this.player._id]); 
   }
 
-  getPlayerProfile(index) { // same thing with the index again
+  getPlayerProfile(index) { 
       this.player = this.players[index];
       this.router.navigate(['/player-profile', this.player._id]);
   }
 
   deletePlayer(index) {
       console.log(index);
-      const playerId = this.players[index]._id; // CHANGED TO CONST
+      const playerId = this.players[index]._id; 
       this.http.delete('/api/delete-player/' + `${playerId}`).subscribe((players) => {
           this.players = players;
           console.log('Delete Player Worked along with automatic data refresh!');
