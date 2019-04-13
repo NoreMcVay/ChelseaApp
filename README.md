@@ -1,5 +1,5 @@
 # ChelseaApp
-Practise MEAN Stack Chelsea Football Club App using Bootstrap
+Practise MEAN Stack CRUD Chelsea Football Club App using Bootstrap
 
 1. run 'npm install' from both 'chelseaMeanAppFolder/cfcApp' & 'chelseaMeanAppFolder'
 2. run 'ng build' from 'chelseaMeanAppFolder/cfcApp'
